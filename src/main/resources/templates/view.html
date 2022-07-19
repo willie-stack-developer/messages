@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Message Details</title>
+</head>
+<body>
+<div>
+    <form th:object="${inquiry}">
+    <div>
+        <label>Name</label>
+        <input type="text" th:field="*{name}">
+    </div>
+        <div>
+            <label>Email</label>
+            <input type="text" th:field="*{email}">
+        </div>
+        <div>
+            <label>Message</label>
+            <p th:utext="${inquiry.message}"></p>
+        </div>
+    </form>
+</div>
+</body>
+</html>
